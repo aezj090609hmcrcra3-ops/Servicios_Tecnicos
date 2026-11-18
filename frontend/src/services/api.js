@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://servicios-tecnicos-api-xzzh.onrender.com";
 const CLIENTES_URL = `${API_URL}/api/clientes`;
 const TECNICOS_URL = `${API_URL}/api/tecnicos`;
 const SERVICIOS_URL = `${API_URL}/api/servicios`;
