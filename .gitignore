@@ -1,0 +1,23 @@
+# Archivos de configuración con contraseñas / variables de entorno
+.env
+.env.*
+!.env.example
+
+# Python / Backend
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+backend/__pycache__/
+__pycache__/
+*.py[cod]
+
+# React / Frontend
+frontend/node_modules/
+node_modules/
+frontend/dist/
+dist/
+
+# Archivos del sistema y editores
+.DS_Store
+.vscode/

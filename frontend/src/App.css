@@ -1,0 +1,415 @@
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+
+.dashboard {
+min-height: 100vh;
+padding: 40px;
+text-align: center;
+}
+.dashboard nav {
+margin: 25px 0;
+}
+.dashboard nav a {
+margin: 0 10px;
+text-decoration: none;
+}
+.dashboard button {
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Tarjeta del formulario */
+.login {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* Encabezados */
+.login h1 {
+  font-size: 28px;
+  margin: 0 0 8px 0;
+  color: var(--text-h);
+}
+
+.login h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 28px 0;
+  color: var(--text);
+}
+
+/* Estructura del formulario */
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+/* Etiquetas e Inputs */
+.login label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+  margin-bottom: -10px; /* Acerca la etiqueta al input */
+}
+
+.login input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--code-bg);
+  color: var(--text-h);
+  font-size: 15px;
+  box-sizing: border-border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al hacer clic o escribir en un campo */
+.login input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+/* Botón de envío */
+.login button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.login button:hover {
+  opacity: 0.9;
+}
+
+.login button:active {
+  transform: scale(0.98);
+}
+
+/* Mensajes de respuesta (Éxito / Error) */
+.mensaje {
+  margin-top: 20px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mensaje.error {
+  color: #d92d20;
+  background-color: rgba(217, 45, 32, 0.1);
+  border: 1px solid rgba(217, 45, 32, 0.3);
+}
+
+.mensaje.exito {
+  color: #079455;
+  background-color: rgba(7, 148, 85, 0.1);
+  border: 1px solid rgba(7, 148, 85, 0.3);
+}
+
+/* Contenedor principal estilo tarjeta */
+.dashboard {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Encabezado */
+.dashboard-header h1 {
+  font-size: 32px;
+  margin: 0 0 8px 0;
+  color: var(--text-h);
+}
+
+.dashboard-header h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: var(--text-h);
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.dashboard-header strong {
+  color: var(--accent);
+}
+
+/* Barra de navegación */
+.dashboard-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 10px;
+  background-color: var(--code-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-sizing: border-box;
+}
+
+/* Enlaces del menú */
+.dashboard-nav a {
+  color: var(--text-h);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dashboard-nav a:hover {
+  background-color: var(--accent-bg);
+  color: var(--accent);
+}
+
+/* Área de contenido principal (para tablas, formularios o métricas) */
+.dashboard-content {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* Botón de cerrar sesión */
+.btn-logout {
+  padding: 10px 24px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: transparent;
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: rgba(217, 45, 32, 0.1);
+  color: #d92d20;
+  border-color: rgba(217, 45, 32, 0.3);
+}
